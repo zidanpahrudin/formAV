@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+</head>
+    <body>
+        <div class="container mt-5">
+            <div class="header text-center">
+                <h2>KUESIONER AUTOPSI VERBAL 1</h2>
+                <h2>UNTUK KEMATIAN UMUR 0 - 28 HARI</h2>
+                <h4>PUSLITBANG HUMANIORA DAN MANAJEMEN KESEHATAN</h4>
+            </div>
+            <form action="/form-av1" method="POST">
+                <div class="body mt-5 border py-3 px-4">
+                    <!-- PAGE 1 -->
+                    <h2>1. KUNJUNGAN WAWANCARA</h2>
+                    <div>
+                        <h5 class="mt-3">1.1 KETERANGAN KUNJUNGAN</h5>
+                        <div class="form-group">
+                            <label for="tanggal">Tanggal</label>
+                            <input type="text" class="form-control" name="tanggal" id="tanggal">
+                        </div>
+                        <div class="form-group">
+                            <label for="nama_pewawancara">NAMA PEWAWANCARA</label>
+                            <input type="text" class="form-control" name="nama_pewawancara" id="nama_pewawancara">
+                        </div>
+                        <div class="form-group">
+                            <label for="hasil_kunjungan">HASIL KUNJUNGAN</label>
+                            <select name="hasil_kunjungan" id="hasil_kunjungan" class="form-control">
+                                <option></option>
+                                <option value="Lengkap">Lengkap</option>
+                                <option value="Responden tidak dapat dijumpai">Responden tidak dapat dijumpai</option>
+                                <option value="Tidak Lengkap">Tidak Lengkap</option>
+                                <option value="Ditolak">Ditolak</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <h5 class="mt-3">1.2 DATA DEMOGRAFI</h5>
+                        <div class="form-group">
+                            <label for="provinsi">PROVINSI</label>
+                            <input type="text" class="form-control" name="provinsi" id="provinsi">
+                        </div>
+                        <div class="form-group">
+                            <label for="kabupaten">KABUPATEN</label>
+                            <input type="text" class="form-control" name="kabupaten" id="kabupaten">
+                        </div>
+                        <div class="form-group">
+                            <label for="kecamatan">KECAMATAN</label>
+                            <input type="text" class="form-control" name="kecamatan" id="kecamatan">
+                        </div>
+                        <div class="form-group">
+                            <label for="puskesmas">PUSKESMAS</label>
+                            <input type="text" class="form-control" name="puskesmas" id="puskesmas">
+                        </div>
+                        <div class="form-group">
+                            <label for="kelurahan">KELURAHAN/DESA</label>
+                            <input type="text" class="form-control" name="kelurahan" id="kelurahan">
+                        </div>
+                        <div class="form-group">
+                            <label for="nomor_kasus_kematian">NOMOR KASUS KEMATIAN</label>
+                            <input type="text" class="form-control" name="nomor_kasus_kematian" id="nomor_kasus_kematian">
+                        </div>
+                    </div>
+                    
+                    <h2>2. KETERANGAN PENGAWAS/EDITOR</h2>
+                    <div>
+                        <div class="form-group">
+                            <label for="nama_pengawas">NAMA PENGAWAS (KEPALA PUSKESMAS)</label>
+                            <input type="text" class="form-control" name="nama_pengawas" id="nama_pengawas">
+                        </div>
+                        <div class="form-group">
+                            <label for="tanggal_pengawasan">TANGGAL PENGAWASAN</label>
+                            <input type="text" class="form-control" name="tanggal_pengawasan" id="tanggal_pengawasan">
+                        </div>
+                        <div class="form-group">
+                            <label for="editor">EDITOR</label>
+                            <input type="text" class="form-control" name="editor" id="editor">
+                        </div>
+                        <div class="form-group">
+                            <label for="kode_pengentri">KODE PENGENTRI</label>
+                            <input type="text" class="form-control" name="kode_pengentri" id="kode_pengentri">
+                        </div>
+                    </div>
+    
+                    <h2>3. KETERANGAN ALMARHUM/AH DAN RESPONDEN</h2>
+                    <div>
+                        <div class="form-group">
+                            <label for="nama_responden">NAMA RESPONDEN</label>
+                            <input type="text" class="form-control" name="nama_responden" id="nama_responden">
+                        </div>
+                        <div class="form-group">
+                            <label for="nama_almarhum">NAMA ALMARHUM/AH</label>
+                            <input type="text" class="form-control" name="nama_almarhum" id="nama_almarhum">
+                        </div>
+                        <div class="form-group">
+                            <label for="nik_almarhum">NIK ALMARHUM/AH</label>
+                            <input type="text" class="form-control" name="nik_almarhum" id="nik_almarhum">
+                        </div>
+                        <div class="form-group">
+                            <label for="jenis_kelamin_almarhum">JENIS KELAMIN ALMARHUM/AH</label>
+                            <select name="jenis_kelamin_almarhum" id="jenis_kelamin_almarhum" class="form-control">
+                                <option></option>
+                                <option value="LAKI-LAKI">LAKI-LAKI</option>
+                                <option value="PEREMPUAN">PEREMPUAN</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tanggal_lahir_almarhum">TANGGAL LAHIR ALMARHUM/AH</label>
+                            <input type="text" class="form-control" name="tanggal_lahir_almarhum" id="tanggal_lahir_almarhum">
+                        </div>
+                        <div class="form-group">
+                            <label for="tanggal_meninggal_almarhum">TANGGAL MENINGGAL ALMARHUM/AH</label>
+                            <input type="text" class="form-control" name="tanggal_meninggal_almarhum" id="tanggal_meninggal_almarhum">
+                        </div>
+                        <div class="form-group">
+                            <label for="apakah_lahir_mati">APAKAH LAHIR MATI?</label>
+                            <select name="apakah_lahir_mati" id="apakah_lahir_mati" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="umur">Umur</label>
+                            <input type="text" class="form-control" name="umur_jam" id="umur_jam" placeholder="Jam">
+                            <input type="text" class="form-control" name="umur_hari" id="umur_hari" placeholder="Hari">
+                        </div>
+                        <div class="form-group">
+                            <label for="tempat_meninggal_almarhum">TEMPAT MENINGGAL</label>
+                            <select name="tempat_meninggal_almarhum" id="tempat_meninggal_almarhum" class="form-control hv_other">
+                                <option></option>
+                                <option value="RUMAH SAKIT">RUMAH SAKIT</option>
+                                <option value="FASKES LAINNYA">FASKES LAINNYA</option>
+                                <option value="DI RUMAH">DI RUMAH</option>
+                                <option value="PERJALANAN KE RS / FASKES">PERJALANAN KE RS / FASKES</option>
+                                <option value="LAINNYA">LAINNYA</option>
+                            </select>
+    
+                            <input type="text" name="tempat_meninggal_almarhum" id="tempat_meninggal_almarhum" class="form-control d-none input_other" placeholder="Lainnya">
+                        </div>
+                        <div class="form-group">
+                            <label for="status_kependudukan_almarhum">STATUS KEPENDUDUKAN ALMARHUM/AH</label>
+                            <select name="status_kependudukan_almarhum" id="status_kependudukan_almarhum" class="form-control">
+                                <option></option>
+                                <option value="Penduduk">Penduduk</option>
+                                <option value="Bukan Penduduk">Bukan Penduduk</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="alamat_tempat_tinggal_almarhum">ALAMAT TEMPAT TINGGAL ALMARHUM/AH (LENGKAP)</label>
+                            <input type="text" class="form-control" name="alamat_tempat_tinggal_almarhum" id="alamat_tempat_tinggal_almarhum">
+                        </div>
+                        <div class="form-group">
+                            <label for="alamat_tempat_meninggal_almarhum">ALAMAT TEMPAT MENINGGAL ALMARHUM/AH (LENGKAP)</label>
+                            <input type="text" class="form-control" name="alamat_tempat_meninggal_almarhum" id="alamat_tempat_meninggal_almarhum">
+                        </div>
+                        <div class="form-group">
+                            <label for="no_hp_responden">NO TLP/HP RESPONDEN</label>
+                            <input type="text" class="form-control" name="no_hp_responden" id="no_hp_responden">
+                        </div>
+                        <div class="form-group">
+                            <label for="responden_setuju_diwawancarai">RESPONDEN SETUJU DIWAWANCARAI</label>
+                            <select name="responden_setuju_diwawancarai" id="responden_setuju_diwawancarai" class="form-control">
+                                <option></option>
+                                <option value="SETUJU DIWAWANCARAI">SETUJU DIWAWANCARAI</option>
+                                <option value="MENOLAK DIWAWANCARA">MENOLAK DIWAWANCARA</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <!-- PAGE 2 -->
+                    <div>
+                        <h5 class="mt-3">Catatan waktu awal wawancara</h5>
+                        <div class="form-group">
+                            <label for="jam">JAM</label>
+                            <input type="text" class="form-control" name="jam" id="jam">
+                        </div>
+                        <div class="form-group">
+                            <label for="menit">MENIT</label>
+                            <input type="text" class="form-control" name="menit" id="menit">
+                        </div>
+                    </div>
+    
+                    <h2>KETERANGAN ALMARHUM/AH DAN TEMPAT KEMATIAN</h2>
+                    <div>
+                        <div class="form-group">
+                            <label for="nama_neonatal_almarhum">Siapakah nama Neonatal (Almarhum/ah)?</label>
+                            <input type="text" class="form-control" name="nama_neonatal_almarhum" id="nama_neonatal_almarhum">
+                        </div>
+                        <div class="form-group">
+                            <label for="nama_ibu_neonatal_almarhum">Siapakah nama Ibu Neonatal (Almarhum/ah)?</label>
+                            <input type="text" class="form-control" name="nama_ibu_neonatal_almarhum" id="nama_ibu_neonatal_almarhum">
+                        </div>  
+                    </div>
+    
+                    <h2>KETERANGAN RESPONDEN</h2>
+                    <div>
+                        <div class="form-group">
+                            <label for="2_nama_responden">Nama Responden</label>
+                            <input type="text" class="form-control" name="2_nama_responden" id="2_nama_responden">
+                        </div>
+                        <div class="form-group">
+                            <label for="2_hubungan_responden">Apakah hubungan Bapak/Ibu/Sdr/i dengan Neonatal (Almarhum/ah)?</label>
+                            <select name="2_hubungan_responden" id="2_hubungan_responden" class="form-control">
+                                <option></option>
+                                <option value="ORANG TUA">ORANG TUA</option>
+                                <option value="KAKAK/ADIK">KAKAK/ADIK</option>
+                                <option value="HUBUNGAN LAINNYA">HUBUNGAN LAINNYA</option>
+                                <option value="TIDAK ADA HUBUNGAN">TIDAK ADA HUBUNGAN</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="2_hubungan_tinggal">Apakah Bapak/Ibu/Sdr/i tinggal dengan Neonatal (Alm/ah) pada saat menjelang kematiannya?</label>
+                            <select name="2_hubungan_tinggal" id="2_hubungan_tinggal" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <h2>GEJALA DAN TANDA YANG DITEMUKAN PADA PERIODE TERAKHIR SAKITNYA NEONATAL (ALMARHUM/AH)</h2>
+                    <div>
+                        <div class="form-group">
+                            <label for="riwayat_kematian">Dapatkah Bapak/Ibu/Sdr menceritakan tentang riwayat penyakit/kejadian yang menyebabkan Neonatal (Almarhum/ah) meninggal ?</label>
+                            <textarea class="form-control" name="riwayat_kematian" id="riwayat_kematian"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="penyebab_kematian">Penyebab kematian menurut responden</label>
+                            <input type="text" class="form-control" name="penyebab_kematian" id="penyebab_kematian">
+                        </div>
+                        <div class="form-group">
+                            <label for="3A310">Apakah Neonatal (Almarhum/ah) meninggal secara mendadak?</label>
+                            <select name="3A310" id="3A310" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B100">Apakah Neonatal (Almarhum/ah) mengalami demam?</label>
+                            <select name="3B100" id="3B100" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B110">Berapa hari Neonatal (Almarhum/ah)mengalami demam?</label>
+                            <input type="text" class="form-control" name="3B110" id="3B110">
+                        </div>
+                        <div class="form-group">
+                            <label for="3B130">Apakah Neonatal (Almarhum/ah) batuk?</label>
+                            <select name="3B130" id="3B130" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B180">Apakah Neonatal (Almarhum/ah )mengalami gangguan pernafasan?</label>
+                            <select name="3B180" id="3B180" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B190">Selama sakit yang menyebabkan Neonatal (Almarhum/ah) meninggal, apakah mengalami nafas cepat?</label>
+                            <select name="3B190" id="3B190" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B200">Berapa hari Neonatal (Almarhum/ah) mengalami nafas cepat?</label>
+                            <input type="text" class="form-control" name="3B200" id="3B200">
+                        </div>
+                        <div class="form-group">
+                            <label for="3B210">Apakah Neonatal (Almarhum/ah) pernah mengalami sesak nafas?</label>
+                            <select name="3B210" id="3B210" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B220">Berapa hari Neonatal (Almarhum/ah) mengalami sesak nafas?</label>
+                            <input type="text" class="form-control" name="3B220" id="3B220">
+                        </div>
+                        <div class="form-group">
+                            <label for="3B242">Selama sakit yang menyebabkan Neonatal (Almarhum/ah) meninggal, apakah pernah mengalami sulit bernafas?</label>
+                            <select name="3B242" id="3B242" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B244">Berapa hari Neonatal (Almarhum/ah) mengalami sulit bernafas?</label>
+                            <input type="text" class="form-control" name="3B244" id="3B244">
+                        </div>
+                        <div class="form-group">
+                            <label for="3B250">Apakah terlihat dinding dada bagian bawah tertarik kedalam ketika Neonatal (Almarhum/ah) bernafas?</label>
+                            <select name="3B250" id="3B250" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B260">Apakah Neonatal (Almarhum/ah) ketika bernafas mengeluarkan bunyi : ngorok atau mengi? *TIRUKAN SUARANYA</label>
+                            <select name="3B260" id="3B260" class="form-control">
+                                <option></option>
+                                <option value="NGOROK">NGOROK</option>
+                                <option value="MENGI">MENGI</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B280">Apakah Neonatal (Almarhum/ah) mengalami diare?</label>
+                            <select name="3B280" id="3B280" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B300">Selama menderita penyakit terakhir, apakah pernah terdapat darah di dalam tinja Neonatal (Almarhum/ah?)</label>
+                            <select name="3B300" id="3B300" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B310">Apakah Neonatal (Almarhum/ah) mengalami muntah?</label>
+                            <select name="3B310" id="3B310" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3D070">Berapa hari sebelum meninggal Neonatal (Almarhum/ah) mengalami muntah?</label>
+                            <input type="text" class="form-control" name="3D070" id="3D070">
+                        </div>
+                        <div class="form-group">
+                            <label for="3B320">Apakah mengalami muntah darah?</label>
+                            <select name="3B320" id="3B320" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B330">Apakah Neonatal (Almarhum/ah) mengalami gangguan perut?</label>
+                            <select name="3B330" id="3B330" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B360">Apakah perut Neonatal (Almarhum/ah) terlihat menggembung (tidak seperti biasanya)?</label>
+                            <select name="3B360" id="3B360" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B440">Apakah Neonatal (Almarhum/ah) mengalami penurunan kesadaran lebih dari 24 jam sebelum meninggal?</label>
+                            <select name="3B440" id="3B440" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B460">Apakah Neonatal (Almarhum/ah) mengalami kejang?</label>
+                            <select name="3B460" id="3B460" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B530">Apakah Neonatal (Almarhum/ah) mempunyai masalah dengan kulit?</label>
+                            <select name="3B530" id="3B530" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B560">Selama sakit yang menyebabkan kematiannya apakah Neonatal (Alm/ah) mengalami bintik-bintik merah (ruam) di kulitnya?</label>
+                            <select name="3B560" id="3B560" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B594">Selama sakit terakhirnya apakah Neonatal (Almarhum/ah) apakah ada bagian kulitnya yang berubah warna menjadi bercak hitam?</label>
+                            <select name="3B594" id="3B594" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B596">Selama sakit yang menyebabkan Neonatal (Almarhum/ah) meninggal, apakah mengalami perdarahan?</label>
+                            <select name="3B596" id="3B596" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3B750">Apakah bagian putih mata Neonatal (Almarhum/ah) berubah menjadi kuning?</label>
+                            <select name="3B750" id="3B750" class="form-control">
+                                <option></option>
+                                <option value="YA">YA</option>
+                                <option value="TIDAK">TIDAK</option>
+                                <option value="TIDAK TAHU">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <h2>RIWAYAT NEONATAL, TANDA DAN GEJALA</h2>
+    
+                    <div>
+                        <div class="form-group">
+                            <label for="3D070">Berapa hari umur Neonatal (Almarhum/ah) ketika sakit mulai terlihat parah</label>
+                            <input type="text" class="form-control" name="3D070" id="3D070">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D100">Apakah Neonatal (Almarhum/ah) lahir kembar?</label>
+                            <select name="3D100" id="3D100" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D102">Urutan kelahiran keberapa Neonatal ini dari saudara kembarnya?</label>
+                            <select name="3D102" id="3D102" class="form-control">
+                                <option></option>
+                                <option value="1">PERTAMA</option>
+                                <option value="2">KEDUA/LEBIH</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3D104">Apakah ibu Neonatal (Almarhum/ah) masihhidup?</label>
+                            <select name="3D104" id="3D104" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="3D106">Apakah ibu Neonatal (Almarhum/ah) meninggal meninggal saat persalinan atau setelah persalinan?</label>
+                            <select name="3D106" id="3D106" class="form-control">
+                                <option></option>
+                                <option value="1">SELAMA PERSALINAN</option>
+                                <option value="2">SETELAH PERSALINAN</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D108ab">Berapa lama setelah melahirkan Ibu Neonatal (Almarhum/ah) meninggal ?</label>
+                            <input type="text" class="form-control" name="hari_3D108ab" id="hari_3D108ab" placeholder="Hari">
+                            <br>
+                            <input type="text" class="form-control" name="bulan_3D108ab" id="bulan_3D108ab" placeholder="Bulan">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D155">Di manakah Neonatal (Almarhum/ah) dilahirkan?</label>
+                            <select name="3D155" id="3D155" class="form-control hv_other">
+                                <option></option>
+                                <option value="1">RUMAH SAKIT</option>
+                                <option value="2">PUSKESMAS/PUSTU</option>
+                                <option value="3">RUMAH BERSALIN</option>
+                                <option value="4">POLINDES</option>
+                                <option value="5">PRAKTEK BIDAN</option>
+                                <option value="6">RUMAH</option>
+                                <option value="7">LAINNYA</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+    
+                            <input type="text" name="3D155_lainnya" id="3D155_lainnya" class="form-control d-none input_other" placeholder="Lainnya">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D165">Apakah proses persalinan ibu Neonatal (Almarhum/ah) dibantu petugas kesehatan ?</label>
+                            <select name="3D165" id="3D165" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D180">Apakah ukuran Neonatal (Almarhum/ah) normal saat lahir ?</label>
+                            <select name="3D180" id="3D180" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D190">Apakah ukuran Neonatal (Almarhum/ah) lebih kecil dari normal saat lahir (˂ 2,5 kg)?</label>
+                            <select name="3D190" id="3D190" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D200">Apakah ukuran Neonatal (Almarhum/ah) lebih besar dari normal saat lahir ( > 4 kg ) ?</label>
+                            <select name="3D200" id="3D200" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <!-- NOTES -->
+                        <div class="form-group">
+                            <label for="3D201">Berapakah berat badan lahir (dalam satuan gram) Neonatal (Almarhum/ah)?</label>
+                            <input type="text" class="form-control" name="3D201" id="3D201" placeholder="Gram">
+                        </div>
+    
+                        <!-- NOTES -->
+                        <div class="form-group">
+                            <label for="3D215">Pada usia kehamilan berapa bulankah Neonatal (Almarhum/ah) lahir?</label>
+                            <input type="text" class="form-control" name="3D215" id="3D215" placeholder="Bulan">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D215">Selama 3 bulan terakhir kehamilan, apakah ibu Neonatal (Almarhum/ah) mengalami komplikasi?</label>
+                            <select name="3D215" id="3D215" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D221">Apakah ibu Neonatal (Almarhum/ah) mengalami mengalami komplikasi selama proses persalinan persalinan atau ketika melahirkan</label>
+                            <select name="3D221" id="3D221" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D230">Apakah Neonatal (Almarhum/ah) memiliki cacat bawaan saat lahir?</label>
+                            <select name="3D230" id="3D230" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D240">Apakah Neonatal (Almarhum/ah) mengalami benjolan/cacat di tulang belakang?</label>
+                            <select name="3D240" id="3D240" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D241">Apakah Neonatal (Almarhum/ah) memiliki ukuran kepala yang sangat besar?</label>
+                            <select name="3D241" id="3D241" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D242">Apakah Neonatal (Almarhum/ah) memiliki ukuran kepala yang sangat kecil?</label>
+                            <select name="3D242" id="3D242" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D251">Apakah Neonatal (Almarhum/ah) sudah tidak bergerak sewaktu di dalam kandungan sebelum persalinan dimulai?</label>
+                            <select name="3D251" id="3D251" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D251a251b">Berapa lama sebelum persalinan Ibu merasakan Neonatal (Almarhum/ah) sudah tidak bergerak?</label>
+                            <input type="text" class="form-control" name="jam_3D251a251b" id="jam_3D251a251b" placeholder="Jam">
+                            <input type="text" class="form-control" name="hari_3D251a251b" id="hari_3D251a251b" placeholder="Hari">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D253">Apakah Neonatal (Almarhum/ah) lahir 24 jam atau lebih setelah ketuban pecah ?</label>
+                            <select name="3D253" id="3D253" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D254">Apakah air ketubannya berbau?</label>
+                            <select name="3D254" id="3D254" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D258">Bagaimana cara Neonatal (Almarhum/ah) dilahirkan</label>
+                            <select name="3D258" id="3D258" class="form-control">
+                                <option></option>
+                                <option value="1">NORMAL</option>
+                                <option value="2">VAKUM/FORSEP</option>
+                                <option value="3">OPERASI SEKSIO CESAR</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D261">Apakah Ibu Neonatal (Almarhum/ah) menerima vaksinasi TT mulai usia dewasa termasuk selama kehamilan ini ?</label>
+                            <select name="3D261" id="3D261" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D263">Berapa jumlah pemberian vaksin TT</label>
+                            <input type="text" class="form-control" name="3D263" id="3D263" placeholder="Jumlah">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D267">Sebelum kelahiran Neonatal (Alm/ah), berapa kali Ibu melahirkan, termasuk yang lahir mati?</label>
+                            <input type="text" class="form-control" name="3D267" id="3D267" placeholder="Jumlah">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D269">Selama 3 bulan terakhir kehamilan, persalinan atau melahirkan, Apakah Ibu Neonatal (Alm/ah) mengalami tekanan darah tinggi ?</label>
+                            <select name="3D269" id="3D269" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D271">Apakah Ibu Neonatal (Almarhum/ah) mengalami mengalami vagina berbau selama kehamilan atau setelah persalinan?</label>
+                            <select name="3D271" id="3D271" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D273">Selama 3 bulan terakhir kehamilan, persalinan atau melahirkan, apakah Ibu Neonatal (Almarhum/ah) mengalami kejang ?</label>
+                            <select name="3D273" id="3D273" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D275">Selama 3 bulan terakhir kehamilan, persalinan atau melahirkan, Apakah Ibu Neonatal (Alm/ah) mengalami penglihatan kabur?</label>
+                            <select name="3D275" id="3D275" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D276">Apakah Ibu Neonatal (Almarhum/ah) mengalami perdarahan dari vagina selama 3 bulan terakhir sebelum kelahiran dimulai?</label>
+                            <select name="3D276" id="3D276" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D277">Apakah pinggul, kaki, lengan atau tangan Neonatal (Almarhum/ah) yang keluar terlebih dahulu dari vagina sebelum kepala ?</label>
+                            <select name="3D277" id="3D277" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D278">Apakah leher Neonatal (Almarhum/ah) terlilit tali pusat pada saat lahir ?</label>
+                            <select name="3D278" id="3D278" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D280">Apakah saat lahir kulit Neonatal (Alm/ah) berwarna kebiruan ?</label>
+                            <select name="3D280" id="3D280" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D285">Apakah Neonatal (Almarhum/ah) menangis saat lahir?</label>
+                            <select name="3D285" id="3D285" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D290">Apakah Neonatal (Almarhum/ah) menangis segera setelah lahir walaupun lemah?</label>
+                            <select name="3D290" id="3D290" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D292">Berapa menit setelah lahir Neonatal (Almarhum/ah) menangis pertama kali ?</label>
+                            <input type="text" class="form-control" name="3D292" id="3D292">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D294">Apakah Neonatal (Almarhum/ah) berhenti menangis?</label>
+                            <select name="3D294" id="3D294" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D296">Berapa jam sebelum meninggal Neonatal (Almarhum/ah) berhenti menangis ?</label>
+                            <input type="text" class="form-control" name="3D292" id="3D292">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D298">Apakah Neonatal (Almarhum/ah) bergerak saat lahir?</label>
+                            <select name="3D298" id="3D298" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D299">Apakah Neonatal (Almarhum/ah) sempat bernafas saat lahir?</label>
+                            <select name="3D299" id="3D299" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D300">Apakah Neonatal (Almarhum/ah) bernafas segera setelah lahir walaupun lemah?</label>
+                            <select name="3D300" id="3D300" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D310">Apakah Neonatal (Almarhum/ah) mendapat bantuan pernafasan ?</label>
+                            <select name="3D310" id="3D310" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D320">Jika tidak menunjukan tanda-tanda ke-hidupan apakah Neonatal lahir mati?</label>
+                            <select name="3D320" id="3D320" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D325">Apakah ada tanda-tanda cedera di tubuh Neonatal (Almarhum/ah) setelah lahir? <br><b>(pertanyaan ini hanya untuk jika bayi lahir mati)</b></label>
+                            <select name="3D325" id="3D325" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D330">Apakah kulit Neonatal (Alm/ah) mengalami maserasi, menunjukkan tanda pembusukan?<br><b>(pertanyaan ini hanya untuk jika bayi lahir mati)</b></label>
+                            <select name="3D330" id="3D330" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D345">Apakah Neonatal (Almarhum/ah) berhenti menyusu?</label>
+                            <select name="3D345" id="3D345" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D350">Berapa hari setelah lahir neonatal (Alm/ah) berhenti menyusu?</label>
+                            <input type="text" class="form-control" name="3D350" id="3D350">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D360">Apakah Neonatal (Almarhum/ah) mengalami kejang dalam 24 jam setelah lahir ?</label>
+                            <select name="3D360" id="3D360" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D370">Apakah Neonatal (Almarhum/ah) mengalami kejang saat >24 jam setelah lahir ?</label>
+                            <select name="3D370" id="3D370" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D380">Apakah tubuh Neonatal (Almarhum/ah) mengalami kaku dengan punggung belakang melengkung ?</label>
+                            <select name="3D380" id="3D380" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D390">Selama sakit yang menyebabkan Neonatal (Almarhum/ah) meninggal, apakah mengalami ubun-ubun menonjol ?</label>
+                            <select name="3D390" id="3D390" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D400">Selama sakit yang menyebabkan Neonatal (Almarhum/ah) meninggal, apakah mengalami ubun-ubun cekung ?</label>
+                            <select name="3D400" id="3D400" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D410">Apakah Neonatal (Almarhum/ah) tidak respon atau tidak sadar segera setelah lahir dalam waktu kurang 24 jam?</label>
+                            <select name="3D410" id="3D410" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D420">Apakah Neonatal (Almarhum/ah) tidak respon atau tidak sadar segera setelah lahir dalam waktu lebih dari 24 jam?</label>
+                            <select name="3D420" id="3D420" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D430">Selama sakit yang menyebabkan Neonatal (Almarhum/ah) meninggal, apakah kulit terasa dingin saat disentuh?</label>
+                            <select name="3D430" id="3D430" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D435">Selama sakit yang menyebabkan Neonatal (Almarhum/ah) meninggal, apakah menjadi lemah setelah aktifitas normal ?</label>
+                            <select name="3D435" id="3D435" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D440">Apakah tali pusat Neonatal (Almarhum/ah) kemerahan atau berbau ?</label>
+                            <select name="3D440" id="3D440" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D445">Selama sakit yang menyebabkan Neonatal (Almarhum/ah) meninggal, apakah memiliki borok dikulit ?</label>
+                            <select name="3D445" id="3D445" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D450">Selama sakit yang menyebabkan Neonatal (Alm/ah) meninggal, apakah kulit menguning ditelapak (tangan) atau telapak (kaki) ?</label>
+                            <select name="3D450" id="3D450" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3D455">Apakah Neonatal (Almarhum/ah) kelihatan sehat dan tiba-tiba meninggal ?</label>
+                            <select name="3D455" id="3D455" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                    </div>
+    
+                    <h2>RIWAYAT CEDERA</h2>
+    
+                    <div>
+                        <div class="form-group">
+                            <label for="3E100">Apakah Neonatal (Almarhum/ah) mengalami cedera yangmenyebabkan kematian?</label>
+                            <select name="3E100" id="3E100" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3E102">Apakah cedera disengaja oleh orang lain?</label>
+                            <select name="3E102" id="3E102" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <table class="table">
+                                <tr>
+                                    <th>Bagaimana mekanisme cedera yang dialaminya?</th>
+                                    <th>Y</th>
+                                    <th>T</th>
+                                    <th>TT</th>
+                                </tr>
+                                <tr>
+                                    <td>DITEMBAK</td>
+                                    <td><input type="radio" name="p_1"> 1</td>
+                                    <td><input type="radio" name="p_1"> 2</td>
+                                    <td><input type="radio" name="p_1"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>DITUSUK BENDA TAJAM</td>
+                                    <td><input type="radio" name="p_2"> 1</td>
+                                    <td><input type="radio" name="p_2"> 2</td>
+                                    <td><input type="radio" name="p_2"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>DICEKIK</td>
+                                    <td><input type="radio" name="p_3"> 1</td>
+                                    <td><input type="radio" name="p_3"> 2</td>
+                                    <td><input type="radio" name="p_3"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>DIPUKUL DGN BENDA TUMPUL</td>
+                                    <td><input type="radio" name="p_4"> 1</td>
+                                    <td><input type="radio" name="p_4"> 2</td>
+                                    <td><input type="radio" name="p_4"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>DIBAKAR</td>
+                                    <td><input type="radio" name="p_5"> 1</td>
+                                    <td><input type="radio" name="p_5"> 2</td>
+                                    <td><input type="radio" name="p_5"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>MEKANISME LAINNYA</td>
+                                    <td><input type="radio" name="p_6"> 1</td>
+                                    <td><input type="radio" name="p_6"> 2</td>
+                                    <td><input type="radio" name="p_6"> 8</td>
+                                </tr>
+    
+                            </table>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3E115">Apakah Neonatal (Alm/ah) meninggal karena kecelakaan lalu lintas?</label>
+                            <select name="3E115" id="3E115" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3E120">Apa peran Neonatal (Alm/ah) saat mengalami kecelakaan lalu lintas?</label>
+                            <select name="3E120" id="3E120" class="form-control">
+                                <option></option>
+                                <option value="1">PEJALAN KAKI</option>
+                                <option value="2">PENGEMUDI ATAU PENUMPANG MOBIL</option>
+                                <option value="3">PENGEMUDI ATAU PENUMPANG BUS ATAU KENDERAAN TRUK</option>
+                                <option value="4">PENGEMUDI ATAU PENUMPANG SEPEDA MOTOR</option>
+                                <option value="5">PENGEMUDI ATAU PENUMPANG SEPEDA</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3E170">Apa lawan tabrakan saat kecelakaan lalu lintas terjadi?</label>
+                            <select name="3E170" id="3E170" class="form-control hv_other">
+                                <option></option>
+                                <option value="1">PEJALAN KAKI</option>
+                                <option value="2">BENDA DIAM/TIDAK BERGERAK</option>
+                                <option value="3">MOBIL ATAU RODA EMPAT</option>
+                                <option value="4">BUS ATAU TRUK</option>
+                                <option value="5">SEPEDA MOTOR</option>
+                                <option value="6">SEPEDA</option>
+                                <option value="7">LAINNYA</option>
+                            </select>
+                            <br>
+                            <input type="text" class="form-control d-none input_other" name="lainnya_3E170" id="lainnya_3E170">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3E310">Apakah Neonatal (Alm/ah) cedera karena terjatuh?</label>
+                            <select name="3E310" id="3E310" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3E320">Apakah Neonatal (Alm/ah) cedera karena tenggelam?</label>
+                            <select name="3E320" id="3E320" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3E330">Apakah Neonatal (Alm/ah) cedera karena terbakar?</label>
+                            <select name="3E330" id="3E330" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3E335">Apakah Neonatal (Alm/ah) cedera karena kekerasan Benda tumpul?</label>
+                            <select name="3E335" id="3E335" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3E400">Apakah Neonatal (Alm/ah) terkena racun tanaman/binatang/serangga yang menyebabkan meninggal?</label>
+                            <select name="3E400" id="3E400" class="form-control hv_other">
+                                <option></option>
+                                <option value="1">ANJING</option>
+                                <option value="2">ULAR</option>
+                                <option value="3">SERANGGA ATAU KALAJENGKING</option>
+                                <option value="4">LAINNYA</option>
+                            </select>
+                            <br>
+                            <input type="text" class="form-control d-none input_other" name="lainnya_3E400" id="lainnya_3E400">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3E500">Apakah Neonatal (Alm/ah) cedera karena bencana alam?</label>
+                            <select name="3E500" id="3E500" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3E510">Apakah Neonatal (Alm/ah) cedera karena keracunan?</label>
+                            <select name="3E510" id="3E510" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3E520">Apakah Neonatal (Alm/ah) subjek untuk dibunuh?</label>
+                            <select name="3E520" id="3E520" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3E530">Apakah Neonatal (Alm/ah) tersengat listrik?</label>
+                            <select name="3E530" id="3E530" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3E530a">Apakah Neonatal (Alm/ah) cedera karena lainnya?</label>
+                            <select name="3E530a" id="3E530a" class="form-control hv_other">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                            <input type="text" class="form-control d-none input_other" name="3E530A_ya" id="3E530A_ya" placeholder="Karena apa?">
+                        </div>
+    
+                    </div>
+    
+                    <h2>PENGGUNAAN PELAYANAN KESEHATAN</h2>
+    
+                    <div>
+                        <div class="form-group">
+                            <label for="3G110">Apakah Neonatal (Alm/ah) mendapatkan pengobatan untuk penyakit yang menyebabkan meninggalnya?</label>
+                            <select name="3G110" id="3G110" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <table class="table">
+                                <tr>
+                                    <th>Apakah Neonatal (Alm/ah) diberikan:</th>
+                                    <th>Y</th>
+                                    <th>T</th>
+                                    <th>TT</th>
+                                </tr>
+                                <tr>
+                                    <td>CAIRAN ORALIT</td>
+                                    <td><input type="radio" name="p_1"> 1</td>
+                                    <td><input type="radio" name="p_1"> 2</td>
+                                    <td><input type="radio" name="p_1"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>CAIRAN INFUS</td>
+                                    <td><input type="radio" name="p_2"> 1</td>
+                                    <td><input type="radio" name="p_2"> 2</td>
+                                    <td><input type="radio" name="p_2"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>TRANSFUSI DARAH</td>
+                                    <td><input type="radio" name="p_3"> 1</td>
+                                    <td><input type="radio" name="p_3"> 2</td>
+                                    <td><input type="radio" name="p_3"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>NGT/OGT</td>
+                                    <td><input type="radio" name="p_4"> 1</td>
+                                    <td><input type="radio" name="p_4"> 2</td>
+                                    <td><input type="radio" name="p_4"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>INJEKSI ANTIBIOTIK</td>
+                                    <td><input type="radio" name="p_5"> 1</td>
+                                    <td><input type="radio" name="p_5"> 2</td>
+                                    <td><input type="radio" name="p_5"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>ART</td>
+                                    <td><input type="radio" name="p_6"> 1</td>
+                                    <td><input type="radio" name="p_6"> 2</td>
+                                    <td><input type="radio" name="p_6"> 8</td>
+                                </tr>
+    
+                            </table>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3G170">Apakah Neonatal (Alm/ah) dilakukan operasi untuk penyakitnya?</label>
+                            <select name="3G170" id="3G170" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3G190">Apakah Neonatal (Alm/ah) untuk dinyatakan sakit parah oleh rumah sakit?</label>
+                            <select name="3G190" id="3G190" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="3H100">Apakah Neonatal (Alm/ah) mendapatkan imunisasi?</label>
+                            <select name="3H100" id="3H100" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="3H110">Apakah Neonatal (Alm/ah) mempunyai Kartu KMS/Imunisasi/buku KIA ?</label>
+                            <select name="3H110" id="3H110" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="3H120">Dapatkah saya melihat kartu KMS/Imunisasi/buku KIA?</label>
+                            <select name="3H120" id="3H120" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3H125">SALIN IMUNISASI YANG TELAH DIDAPAT DISINI</label>
+                            <textarea class="form-control" name="3H125" id="3H125"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="3H130">Apakah Neonatal (Alm/ah) mencari pengobatan untuk sakit yang membuat meninggal?</label>
+                            <select name="3H130" id="3H130" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <table class="table">
+                                <tr>
+                                    <th>Kemana Neonatal (Alm/ah) mencari pengobatan?</th>
+                                    <th>Y</th>
+                                    <th>T</th>
+                                    <th>TT</th>
+                                </tr>
+                                <tr>
+                                    <td>TRADISIONAL</td>
+                                    <td><input type="radio" name="p_1"> 1</td>
+                                    <td><input type="radio" name="p_1"> 2</td>
+                                    <td><input type="radio" name="p_1"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>DUKUN</td>
+                                    <td><input type="radio" name="p_2"> 1</td>
+                                    <td><input type="radio" name="p_2"> 2</td>
+                                    <td><input type="radio" name="p_2"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>DUKUN BERSALIN TERLATIH</td>
+                                    <td><input type="radio" name="p_3"> 1</td>
+                                    <td><input type="radio" name="p_3"> 2</td>
+                                    <td><input type="radio" name="p_3"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>APOTIK</td>
+                                    <td><input type="radio" name="p_4"> 1</td>
+                                    <td><input type="radio" name="p_4"> 2</td>
+                                    <td><input type="radio" name="p_4"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>DOKTER PRAKTEK</td>
+                                    <td><input type="radio" name="p_5"> 1</td>
+                                    <td><input type="radio" name="p_5"> 2</td>
+                                    <td><input type="radio" name="p_5"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>PUSKESMAS</td>
+                                    <td><input type="radio" name="p_6"> 1</td>
+                                    <td><input type="radio" name="p_6"> 2</td>
+                                    <td><input type="radio" name="p_6"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>KLINIK SWASTA</td>
+                                    <td><input type="radio" name="p_7"> 1</td>
+                                    <td><input type="radio" name="p_7"> 2</td>
+                                    <td><input type="radio" name="p_7"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>RUMAH SAKIT SWASTA</td>
+                                    <td><input type="radio" name="p_8"> 1</td>
+                                    <td><input type="radio" name="p_8"> 2</td>
+                                    <td><input type="radio" name="p_8"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>RUMAH SAKIT PEMERINTAH</td>
+                                    <td><input type="radio" name="p_9"> 1</td>
+                                    <td><input type="radio" name="p_9"> 2</td>
+                                    <td><input type="radio" name="p_9"> 8</td>
+                                </tr>
+                            </table>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3H160">Apakah tenaga kesehatan mengatakan penyebab kematian Neonatal (Alm/ah)?</label>
+                            <select name="3H160" id="3H160" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3H170">Jika ya, apa penyebabnya?</label>
+                            <input type="text" class="form-control" name="3H170" id="3H170">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="3H900">Apakah Neonatal (Alm/ah) memiliki jaminan kesehatan?</label>
+                            <select name="3H900" id="3H900" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <table class="table">
+                                <tr>
+                                    <th>Jika ya, apakah jenis jaminan kesehatannya?</th>
+                                    <th>Y</th>
+                                    <th>T</th>
+                                    <th>TT</th>
+                                </tr>
+                                <tr>
+                                    <td>BPJS PBI</td>
+                                    <td><input type="radio" name="p_1"> 1</td>
+                                    <td><input type="radio" name="p_1"> 2</td>
+                                    <td><input type="radio" name="p_1"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>BPJS NON PBI</td>
+                                    <td><input type="radio" name="p_2"> 1</td>
+                                    <td><input type="radio" name="p_2"> 2</td>
+                                    <td><input type="radio" name="p_2"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>BPJS MANDIRI</td>
+                                    <td><input type="radio" name="p_3"> 1</td>
+                                    <td><input type="radio" name="p_3"> 2</td>
+                                    <td><input type="radio" name="p_3"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>ASKES SWASTA</td>
+                                    <td><input type="radio" name="p_4"> 1</td>
+                                    <td><input type="radio" name="p_4"> 2</td>
+                                    <td><input type="radio" name="p_4"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>KIS</td>
+                                    <td><input type="radio" name="p_5"> 1</td>
+                                    <td><input type="radio" name="p_5"> 2</td>
+                                    <td><input type="radio" name="p_5"> 8</td>
+                                </tr>
+                                <tr>
+                                    <td>JAMKESDA</td>
+                                    <td><input type="radio" name="p_6"> 1</td>
+                                    <td><input type="radio" name="p_6"> 2</td>
+                                    <td><input type="radio" name="p_6"> 8</td>
+                                </tr>
+                            </table>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="3H910">Apakah pada pengobatan sakit yang menyebabkan kematiannya, Neonatal (Alm/ah) menggunakan jaminan kesehatan?</label>
+                            <select name="3H910" id="3H910" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <h2>SURAT KETERANGAN KEMATIAN & AKTA KEMATIAN</h2>
+                    <div>
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label for="6H260">Apakah Neonatal (Alm/ah) mempunyai surat keterangan kematian dari pelayanan kesehatan?</label>
+                                <select name="6H260" id="6H260" class="form-control">
+                                    <option></option>
+                                    <option value="1">YA</option>
+                                    <option value="2">TIDAK</option>
+                                    <option value="8">TIDAK TAHU</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="6H260a">SALIN PENYEBAB KEMATIAN YANG TERTULIS DALAM SURAT KETERANGAN PENYEBAB KEMATIAN</label>
+                            <textarea class="form-control" name="6H260a" id="6H260a"></textarea>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="6H260b">Apakah Almarhum/ah memiliki Akte Kematian yang dikeluarkan oleh Kantor Dinas Kependudukan dan Catatan Sipil?</label>
+                            <select name="6H260b" id="6H260b" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                                <option value="8">TIDAK TAHU</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="6H260c">Bolehkan saya melihat akte kematian tersebut? SALIN TANGGAL, BULAN, DAN TAHUN DIKELUARKANNYA AKTE KEMATIAN?</label>
+                            <input type="date" class="form-control" name="THIS_NAME" id="THIS_NAME">
+                        </div>
+    
+                    </div>
+    
+                    <h2>KETERANGAN PENDUKUNG DARI CATATAN KESEHATAN LAINNYA</h2>
+    
+                    <div>
+                        <div class="form-group">
+                            <label for="7H920">Apakah ada keterangan kesehatan pendukung lainnya?</label>
+                            <select name="7H920" id="7H920" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="7H920a">SALINLAH SEMUA KETERANGAN MEDIS (HASIL LAB, RONGENT DSB) YANG MENDUKUNG DARI PELAYANAN KESEHATAN TERAKHIR DAN CATAT TANGGAL KETERANGAN MEDIS TERSEBUT</label>
+                            <textarea class="form-control" name="7H920a" id="7H920a"></textarea>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="7H920b">Apakah ada keterangan hasil visum/autopsy forensik?</label>
+                            <select name="7H920b" id="7H920b" class="form-control">
+                                <option></option>
+                                <option value="1">YA</option>
+                                <option value="2">TIDAK</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="7H920a">HASIL PEMERIKSAAN VISUM/AUTOPSY FORENSIK (JIKA ADA, SALINLAH PENYEBAB KEMATIAN YANG TERCANTUM DALAM HASIL VISUM TERSEBUT)</label>
+                            <textarea class="form-control" name="7H920a" id="7H920a"></textarea>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="7H920d">Catatan waktu akhir wawancara</label>
+                            <input type="text" class="form-control" name="jam_7H920d" id="jam_7H920d" placeholder="Jam">
+                            <br>
+                            <input type="text" class="form-control" name="menit_7H920d" id="menit_7H920d" placeholder="Menit">
+                        </div>
+    
+                    </div>
+    
+                    <h2>CATATAN PEWAWANCARA</h2>
+                    <div>
+                        <b>DIISI SETELAH WAWANCARA SELESAI</b>
+                        <div class="form-group">
+                            <textarea name="catatan_pewawancara" id="catatan_pewawancara" rows="5" class="form-control"></textarea>
+                        </div>
+                    </div>
+            
+    
+                    <h2>RESUME DAN DIAGNOSA (Dibuat oleh Dokter)</h2>
+                    <div>
+                        <div class="form-group">
+                            <label for="nama_dokter">NAMA DOKTER</label>
+                            <input class="form-control" name="nama_dokter" id="nama_dokter">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="resume_autopsi_verbal">RESUME AUTOPSI VERBAL</label>
+                            <textarea class="form-control" name="resume_autopsi_verbal" id="resume_autopsi_verbal" rows="5"></textarea>
+                        </div>
+                    </div>
+                    
+                    <h2>DIAGNOSIS</h2>
+                    <h5>A. KEMATIAN UMUR 0 - 6 HARI</h5>
+    
+                    <div>
+                        <div class="form-group">
+                            <label for="penyebab_utama_bayi">PENYEBAB UTAMA BAYI</label>
+                            <input class="form-control" name="penyebab_utama_bayi" id="penyebab_utama_bayi">
+    
+                            <label for="penyebab_utama_bayi_tbhj">T/B/H/J</label>
+                            <input class="form-control" name="penyebab_utama_bayi_tbhj" id="penyebab_utama_bayi_tbhj">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="penyebab_lain_bayi">PENYEBAB LAIN BAYI</label>
+                            <input class="form-control" name="penyebab_lain_bayi" id="penyebab_lain_bayi">
+    
+                            <label for="penyebab_utama_bayi_tbhj">T/B/H/J</label>
+                            <input class="form-control" name="penyebab_utama_bayi_tbhj" id="penyebab_utama_bayi_tbhj">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="penyebab_utama_bayi">PENYEBAB UTAMA IBU</label>
+                            <input class="form-control" name="penyebab_utama_bayi" id="penyebab_utama_bayi">
+    
+                            <label for="penyebab_utama_bayi_tbhj">T/B/H/J</label>
+                            <input class="form-control" name="penyebab_utama_bayi_tbhj" id="penyebab_utama_bayi_tbhj">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="penyebab_lain_bayi">PENYEBAB LAIN IBU</label>
+                            <input class="form-control" name="penyebab_lain_bayi" id="penyebab_lain_bayi">
+    
+                            <label for="penyebab_utama_bayi_tbhj">T/B/H/J</label>
+                            <input class="form-control" name="penyebab_utama_bayi_tbhj" id="penyebab_utama_bayi_tbhj">
+                        </div>
+                    </div>
+    
+                    <h5>B. KEMATIAN UMUR 7 HARI KE ATAS</h5>
+                    <h6>I. PENYEBAB KEMATIAN</h6>
+                    <div>
+                        <div class="form-group">
+                            <label for="1_disebabkan_oleh">Disebabkan oleh...</label>
+                            <input class="form-control" name="1_disebabkan_oleh" id="1_disebabkan_oleh">
+                            
+                            <label for="1_disebabkan_oleh_tbhj">T/B/H/J</label>
+                            <input class="form-control" name="1_disebabkan_oleh_tbhj" id="1_disebabkan_oleh_tbhj">
+                        </div>
+                        <div class="form-group">
+                            <label for="2_disebabkan_oleh">Disebabkan oleh...</label>
+                            <input class="form-control" name="2_disebabkan_oleh" id="2_disebabkan_oleh">
+                            
+                            <label for="2_disebabkan_oleh_tbhj">T/B/H/J</label>
+                            <input class="form-control" name="2_disebabkan_oleh_tbhj" id="2_disebabkan_oleh_tbhj">
+                        </div>
+                        <div class="form-group">
+                            <label for="3_disebabkan_oleh">Disebabkan oleh...</label>
+                            <input class="form-control" name="3_disebabkan_oleh" id="3_disebabkan_oleh">
+                            
+                            <label for="3_disebabkan_oleh_tbhj">T/B/H/J</label>
+                            <input class="form-control" name="3_disebabkan_oleh_tbhj" id="3_disebabkan_oleh_tbhj">
+                        </div>
+                        <div class="form-group">
+                            <label for="4_disebabkan_oleh">Disebabkan oleh...</label>
+                            <input class="form-control" name="4_disebabkan_oleh" id="4_disebabkan_oleh">
+                            
+                            <label for="4_disebabkan_oleh_tbhj">T/B/H/J</label>
+                            <input class="form-control" name="4_disebabkan_oleh_tbhj" id="4_disebabkan_oleh_tbhj">
+                        </div>
+                    </div>
+                    
+                    <h6>II. PENYAKIT/KONDISI LAIN YANG BERKONTRIBUSI NAMUN TIDAK BERHUBUNGAN DENGAN 1 a-d</h6>
+                    <div>
+                        <div class="form-group">
+                            <label for="1_blank"></label>
+                            <input class="form-control" name="1_blank" id="1_blank">
+                            
+                            <label for="1_blank_tbhj">T/B/H/J</label>
+                            <input class="form-control" name="1_blank_tbhj" id="1_blank_tbhj">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="2_blank"></label>
+                            <input class="form-control" name="2_blank" id="2_blank">
+                            
+                            <label for="2_blank_tbhj">T/B/H/J</label>
+                            <input class="form-control" name="2_blank_tbhj" id="2_blank_tbhj">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="tanggal_diagnosis">TANGGAL DIAGNOSIS</label>
+                            <input class="form-control" name="tanggal_diagnosis" id="tanggal_diagnosis">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="2_nama_dokter">NAMA DOKTER</label>
+                            <input class="form-control" name="2_nama_dokter" id="2_nama_dokter">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="tanda_tangan_dokter">TANDA TANGAN DOKTER</label>
+                            <input class="form-control" name="tanda_tangan_dokter" id="tanda_tangan_dokter">
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" />
+            </form>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+        <script src="../public/bundle.js"></script>
+        <script>
+            $(document).ready(function() {
+
+                $('.hv_other').change(function () {
+                    text = $(this).find('option:selected').text();
+
+                    input = $(this).parent().find('.input_other');
+
+                    if (text == 'LAINNYA' || 'YA') {
+                        input.removeClass('d-none');
+                    } else {
+                        input.addClass('d-none');
+                    }
+                });
+
+            });
+        </script>
+    </body>
+</html>
